@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Birds\BirdsController@index');
+
+
+Route::get('/birds/{bird}', 'Birds\BirdsController@show');
