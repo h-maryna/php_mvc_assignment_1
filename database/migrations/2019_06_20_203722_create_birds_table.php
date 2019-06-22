@@ -11,7 +11,7 @@ class CreateBirdsTable extends Migration
      *
      * @return void
      */
-    public function up()
+     public function up()
     {
         Schema::create('birds', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -21,6 +21,7 @@ class CreateBirdsTable extends Migration
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

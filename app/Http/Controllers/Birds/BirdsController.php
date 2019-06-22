@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+
+namespace App\Http\Controllers\Birds;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,15 +11,14 @@ use\App\Bird;
 class BirdsController extends Controller
 {
     public function index(){
-        $bird = bird::where('name', 'pengin')->first();
-        
-        return view('birds.default', compact('bird'));
+       $birds = Bird::all();  
+        return view('bird.birds', compact('birds'));
 
     }
 
-    public function show(bird $bird)
+    public function show($id)
     {
-        //$bird = bird::where('slug', $slug)->first();
-        return view('birds.default', compact('bird'));
-    }
+        $birds = Bird::where('id', $id)->first();
+        return view('bird.birds_detail', compact('birds'));
+    } 
 }
