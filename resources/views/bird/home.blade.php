@@ -7,10 +7,10 @@
 
 <div>
 
-  My name is Maryba
+  This page is about Birds
 
 </div>
-
+<example-component></example-component>
 
 @endsection
 
